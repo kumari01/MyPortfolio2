@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kumari — AI/ML Engineer · UI/UX Designer · Full-Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="cursor" id="customCursor">
+    <svg viewBox="0 0 24 28" width="24" height="28">
+      <path d="M12 2 L21 25 L12 19.5 L3 25 Z" fill="#B7001A" stroke="#FFF8F4" stroke-width="2" stroke-linejoin="round"></path>
+    </svg>
+  </div>
+
+  <div class="ambient"></div>
+
+  <div class="page">
+    <div class="navbar-wrap">
+      <nav class="navbar">
+        <a href="#" class="nav-logo">kumari<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+        </ul>
+        <button class="origin-btn nav-cta" data-origin id="navContactBtn">
+          <span class="origin-fill"></span>
+          <span class="origin-label">Contact</span>
+        </button>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="pill"><span class="dot"></span>Open to work</div>
+
+        <h1 class="name">Kumari<span class="stop">.</span></h1>
+
+        <p class="role-line">
+          <span class="prompt">&gt;</span><span class="role-text" id="roleText"></span><span
+            class="cursor-blink"></span>
+        </p>
+
+        <p class="tagline">
+          I build the intelligence behind products and design the experiences people remember—moving seamlessly between
+          AI models, scalable backend systems, and modern interfaces.
+        </p>
+        <div class="cta-row">
+          <button class="origin-btn origin-btn--inverse" data-origin id="heroWorkBtn">
+            <span class="origin-fill"></span>
+            <span class="origin-label">View My Work</span>
+          </button>
+          <button class="origin-btn" data-origin id="heroContactBtn">
+            <span class="origin-fill"></span>
+            <span class="origin-label">Get in Touch</span>
+          </button>
+          <button class="origin-btn" data-origin>
+            <span class="origin-fill"></span>
+            <span class="origin-label">Resume</span>
+          </button>
+        </div>
+
+        <div class="dock" id="dock">
+          <a href="#" class="dock-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 1.5c-5.8 0-10.5 4.7-10.5 10.5 0 4.64 3.01 8.58 7.19 9.97.53.1.72-.23.72-.51 0-.25-.01-1.08-.01-1.96-2.93.53-3.69-.71-3.92-1.37-.13-.34-.7-1.37-1.2-1.65-.41-.22-1-.76-.01-.77.93-.01 1.6.86 1.82 1.21 1.06 1.79 2.76 1.28 3.43.98.11-.77.42-1.29.76-1.59-2.65-.3-5.42-1.32-5.42-5.87 0-1.3.46-2.36 1.22-3.19-.12-.3-.53-1.52.12-3.16 0 0 1-.32 3.28 1.22a11.1 11.1 0 0 1 5.98 0c2.28-1.54 3.28-1.22 3.28-1.22.65 1.64.24 2.86.12 3.16.76.83 1.22 1.88 1.22 3.19 0 4.56-2.78 5.57-5.43 5.86.43.37.81 1.09.81 2.2 0 1.59-.01 2.87-.01 3.26 0 .28.19.62.73.51A10.52 10.52 0 0 0 22.5 12c0-5.8-4.7-10.5-10.5-10.5Z" />
+            </svg>
+          </a>
+          <a href="#" class="dock-icon" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.94 6 2.5 6S0 4.88 0 3.5 1.04 1 2.48 1s2.5 1.12 2.5 2.5ZM.24 8.25h4.48V23H.24V8.25ZM8.34 8.25h4.3v2.01h.06c.6-1.1 2.05-2.26 4.22-2.26 4.52 0 5.35 2.9 5.35 6.68V23h-4.48v-6.53c0-1.56-.03-3.56-2.2-3.56-2.2 0-2.54 1.68-2.54 3.44V23H8.34V8.25Z" />
+            </svg>
+          </a>
+          <a href="#" class="dock-icon" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.24 3H21l-6.55 7.49L22.2 21h-6.03l-4.73-6.18L5.98 21H3.2l7.02-8.02L2.5 3h6.18l4.28 5.66Zm-1.06 16.17h1.66L7.9 4.74H6.12Z" />
+            </svg>
+          </a>
+          <a href="mailto:hello@example.com" class="dock-icon" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+              <path d="M3 6l9 7 9-7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="photo-col">
+        <div class="photo-stack">
+          <div class="card card-back-2"></div>
+          <div class="card card-back-1"></div>
+          <div class="card card-front">
+            <img src="C:\Users\kumar\Downloads\portfolio\MyImage.jpeg" alt = "Kumari Image">
+          </div>
+        </div>
+      </div>
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <a href="#about" aria-label="Scroll to About Section">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="scroll-arrows">
+            <span></span>
+            <span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ME SECTION ============ -->
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <div class="about-left scroll-reveal scroll-reveal--left">
+          <h2 class="about-header">Chapter I — <span>Who I Am</span></h2>
+          <p class="about-subtitle">AI, full-stack, and thoughtful design—all working together.</p>
+          
+          <p class="about-text">
+            I build intelligent digital products from end to end—from training machine learning models to developing backend APIs and intuitive interfaces. I also build AI-powered applications using Retrieval-Augmented Generation (RAG) to turn data into context-aware experiences.
+          </p>
+          
+          <p class="about-text">
+            My work combines artificial intelligence, backend systems, and frontend engineering to create user-focused solutions. I focus on solving real-world problems with clean, scalable engineering.
+          </p>
+          
+          <p class="about-text">
+            Driven by curiosity, I build products where intelligent systems and thoughtful design come together to deliver meaningful user experiences.
+          </p>
+        </div>
+        
+        <div class="about-right scroll-reveal scroll-reveal--right">
+          <!-- RAG Chatbot Card -->
+          <div class="bot-container">
+            <div class="bot-header">
+              <div class="bot-title-area">
+                <h3 class="bot-title">RAG BOT <span>For Me</span></h3>
+              </div>
+              <div class="bot-status">
+                <span class="status-dot"></span>
+                AI Assistant
+              </div>
+            </div>
+            
+            <div class="bot-messages" id="chatMessages" data-lenis-prevent>
+              <div class="chat-bubble bot">
+                Hello! I'm Kumari's AI Assistant. Ask me anything about her skills, experience, or approach to design and engineering!
+              </div>
+            </div>
+            
+            <div class="bot-quick-prompts">
+              <span class="prompt-chip">What are your primary skills?</span>
+              <span class="prompt-chip">Tell me about your AI background.</span>
+              <span class="prompt-chip">What is your development philosophy?</span>
+            </div>
+            
+            <div class="bot-input-area">
+              <input type="text" class="bot-input" id="chatInput" placeholder="Ask a question about Kumari...">
+              <button class="bot-send-btn" id="chatSendBtn" aria-label="Send message">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Infinite Marquee Banner -->
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <div class="marquee-item"><span class="marquee-star">✦</span> Artificial Intelligence</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> FastAPI / Python</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> RAG Applications</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Machine Learning</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Scalable Backend</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> UI/UX Design</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Full-Stack Developer</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Thoughtful Design</div>
+          <!-- Repeated content for infinite loop scroll seamlessly -->
+          <div class="marquee-item"><span class="marquee-star">✦</span> Artificial Intelligence</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> FastAPI / Python</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> RAG Applications</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Machine Learning</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Scalable Backend</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> UI/UX Design</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Full-Stack Developer</div>
+          <div class="marquee-item"><span class="marquee-star">✦</span> Thoughtful Design</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section id="projects" class="projects-section">
+      <h2 class="projects-title scroll-reveal">Chapter II — <span>Projects</span></h2>
+      
+      <div class="projects-grid">
+        <!-- Sidebar Tabs -->
+        <div class="projects-tabs">
+          <button class="project-tab active" data-project-idx="0">
+            <span class="tab-num">01</span>
+            <span class="tab-name">RAG Chatbot Engine</span>
+          </button>
+          <button class="project-tab" data-project-idx="1">
+            <span class="tab-num">02</span>
+            <span class="tab-name">FastAPI API Gateway</span>
+          </button>
+          <button class="project-tab" data-project-idx="2">
+            <span class="tab-num">03</span>
+            <span class="tab-name">React Analytics Hub</span>
+          </button>
+          <button class="project-tab" data-project-idx="3">
+            <span class="tab-num">04</span>
+            <span class="tab-name">PyTorch DL Pipeline</span>
+          </button>
+        </div>
+        
+        <!-- Content Viewport -->
+        <div class="project-details" id="projectDetails">
+          <div class="project-header">
+            <div class="project-meta">
+              <h3 class="project-name" id="pName">RAG Chatbot Engine</h3>
+              <p class="project-subtitle" id="pSubtitle">GenAI & Knowledge Retriever</p>
+            </div>
+            
+            <div class="project-links">
+              <a href="#" class="project-link-btn" id="pLiveLink" target="_blank" rel="noopener">
+                <span class="btn-label">Live</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+              <a href="#" class="project-link-btn" id="pCodeLink" target="_blank" rel="noopener">
+                <span class="btn-label">Link</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="project-body">
+            <p class="project-description" id="pDescription">
+              A custom Retrieval-Augmented Generation chatbot that parses enterprise documentation and handles contextual, domain-specific queries in real-time. Built with Python and vector embeddings.
+            </p>
+          </div>
+          
+          <div class="project-tags" id="pTags">
+            <span class="project-tag">GenAI</span>
+            <span class="project-tag">ML</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Vector DB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ============ SKILLS SECTION (WAVY TICKER) ============ -->
+    <section id="skills" class="skills-section">
+      <h2 class="projects-title scroll-reveal" id="skill-title">Chapter III — <span>Skills</span></h2>
+      <div class="wavy-ticker-container scroll-reveal scroll-reveal--scale">
+        <!-- Top Wave Track -->
+        <div class="wavy-track-container track-top-wrap">
+          <div class="wavy-track" id="wavyTrackTop"></div>
+        </div>
+
+        <!-- Central Caption -->
+        <div class="skills-caption-wrap">
+          <h2 class="skills-caption">Stuff I Used <span>To Build</span></h2>
+        </div>
+
+        <!-- Bottom Wave Track -->
+        <div class="wavy-track-container track-bottom-wrap">
+          <div class="wavy-track" id="wavyTrackBottom"></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ============ CERTIFICATIONS SECTION (FOCUS SLICE CAROUSEL) ============ -->
+    <section id="certifications" class="certifications-section">
+      <h2 class="projects-title scroll-reveal" id="certifications-title">Chapter IV — <span>Certifications</span></h2>
+      
+      <div class="slice-carousel scroll-reveal scroll-reveal--scale">
+        <!-- Slide 1: DeepLearning.AI -->
+        <div class="slice-item active" data-index="0">
+          <div class="slice-collapsed">
+            <span class="slice-num">01</span>
+            <span class="slice-vertical-title">DeepLearning.AI</span>
+          </div>
+          <div class="slice-expanded">
+            <div class="cert-card">
+              <div class="cert-logo-container">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="cert-svg">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="cert-details">
+                <span class="cert-tag">GenAI & LLM Specialty</span>
+                <h3 class="cert-name">Generative AI with Large Language Models</h3>
+                <span class="cert-org">DeepLearning.AI</span>
+                <p class="cert-description">
+                  Advanced certification focusing on the LLM lifecycle: training, instruction fine-tuning, parameter-efficient fine-tuning (PEFT/LoRA), reinforcement learning from human feedback (RLHF), and building containerized GenAI retrieval agents.
+                </p>
+                <button class="origin-btn cert-verify-btn" data-origin>
+                  <span class="origin-fill"></span>
+                  <span class="origin-label">Verify Credential</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Google Cloud -->
+        <div class="slice-item" data-index="1">
+          <div class="slice-collapsed">
+            <span class="slice-num">02</span>
+            <span class="slice-vertical-title">Google Cloud ML</span>
+          </div>
+          <div class="slice-expanded">
+            <div class="cert-card">
+              <div class="cert-logo-container">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="cert-svg">
+                  <path d="M16.5 9.4 7.55 4.24a1.79 1.79 0 0 0-1.8 0L2.5 6.1a1.8 1.8 0 0 0 0 3.12l9 5.2a1.8 1.8 0 0 0 1.8 0L21.5 9.4a1.8 1.8 0 0 0 0-3.12L18.3 4.4a1.79 1.79 0 0 0-1.8 0zM12 14.5v7.3M2.5 13.9v3.8a1.8 1.8 0 0 0 .9 1.56l8.6 4.97"/>
+                </svg>
+              </div>
+              <div class="cert-details">
+                <span class="cert-tag">Professional Cloud ML</span>
+                <h3 class="cert-name">Professional Machine Learning Engineer</h3>
+                <span class="cert-org">Google Cloud</span>
+                <p class="cert-description">
+                  Validates the ability to design, build, and productionize scalable ML models on GCP using Vertex AI, TensorFlow, BigQuery, and pipeline orchestration tools like Kubeflow. Focused on scalable ML architecture and MLOps practices.
+                </p>
+                <button class="origin-btn cert-verify-btn" data-origin>
+                  <span class="origin-fill"></span>
+                  <span class="origin-label">Verify Credential</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: AWS Specialty -->
+        <div class="slice-item" data-index="2">
+          <div class="slice-collapsed">
+            <span class="slice-num">03</span>
+            <span class="slice-vertical-title">AWS Machine Learning</span>
+          </div>
+          <div class="slice-expanded">
+            <div class="cert-card">
+              <div class="cert-logo-container">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="cert-svg">
+                  <rect x="2" y="2" width="20" height="20" rx="2" ry="2"/>
+                  <path d="M7 17l5-5 5 5M12 12V3"/>
+                </svg>
+              </div>
+              <div class="cert-details">
+                <span class="cert-tag">AWS Cloud Specialty</span>
+                <h3 class="cert-name">AWS Certified Machine Learning – Specialty</h3>
+                <span class="cert-org">Amazon Web Services</span>
+                <p class="cert-description">
+                  Demonstrates expertise in architecting and deploying machine learning workloads on AWS. Covers SageMaker pipelines, data engineering, model tuning, cost optimization, and secure ML deployment strategies in cloud ecosystems.
+                </p>
+                <button class="origin-btn cert-verify-btn" data-origin>
+                  <span class="origin-fill"></span>
+                  <span class="origin-label">Verify Credential</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Microsoft Azure -->
+        <div class="slice-item" data-index="3">
+          <div class="slice-collapsed">
+            <span class="slice-num">04</span>
+            <span class="slice-vertical-title">Azure AI Engineer</span>
+          </div>
+          <div class="slice-expanded">
+            <div class="cert-card">
+              <div class="cert-logo-container">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="cert-svg">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <div class="cert-details">
+                <span class="cert-tag">Azure AI Associate</span>
+                <h3 class="cert-name">Azure AI Engineer Associate</h3>
+                <span class="cert-org">Microsoft</span>
+                <p class="cert-description">
+                  Demonstrates skills in deploying AI solutions using Azure Cognitive Services, Azure OpenAI Service, bot frameworks, and custom neural search engines, integrating AI pipelines directly with cloud applications.
+                </p>
+                <button class="origin-btn cert-verify-btn" data-origin>
+                  <span class="origin-fill"></span>
+                  <span class="origin-label">Verify Credential</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEXT MARQUEE SECTION ============ -->
+    <section class="text-marquee-section scroll-reveal">
+      <div class="marquee-track" id="velocityTrack1">
+        <div class="marquee-flex-wrap">
+          <div class="marquee-scroll-content">
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+          </div>
+          <div class="marquee-scroll-content">
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+            Turning Ideas Into Intelligent Products &nbsp;✦&nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="marquee-track" id="velocityTrack2">
+        <div class="marquee-flex-wrap">
+          <div class="marquee-scroll-content">
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+          </div>
+          <div class="marquee-scroll-content">
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+            Design ✦ Develop ✦ Deploy ✦ Iterate &nbsp;✦&nbsp;
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GET IN TOUCH SECTION ============ -->
+    <section id="contact" class="contact-section">
+      <div class="contact-grid">
+        <div class="contact-left scroll-reveal scroll-reveal--left">
+          <h2 class="contact-header">Chapter V — <span>Get in Touch</span></h2>
+          <p class="contact-subtitle">Let's build something together or just say hello.</p>
+          
+          <p class="contact-text">
+            Whether you have an upcoming project, a machine learning pipeline to build, or need help designing a premium frontend interface, my inbox is always open.
+          </p>
+          
+          <p class="contact-text">
+            I'm always open to talking about exciting full-stack, AI/ML, or design opportunities! Or just reach out manually at <a href="mailto:hello@prebuiltui.com" class="contact-email">hello@prebuiltui.com</a>.
+          </p>
+        </div>
+        
+        <div class="contact-right scroll-reveal scroll-reveal--right">
+          <div class="form-container">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <div class="input-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0" fill="currentColor"/>
+                  </svg>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <div class="input-wrapper">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z" fill="currentColor"/>
+                  </svg>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required />
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Enter your message" required></textarea>
+              </div>
+              
+              <button type="submit" class="origin-btn form-submit-btn" data-origin>
+                <span class="origin-fill"></span>
+                <span class="origin-label">
+                  Submit Form
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m18.038 10.663-5.625 5.625a.94.94 0 0 1-1.328-1.328l4.024-4.023H3.625a.938.938 0 0 1 0-1.875h11.484l-4.022-4.025a.94.94 0 0 1 1.328-1.328l5.625 5.625a.935.935 0 0 1-.002 1.33" fill="currentColor"/>
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ FOOTER SECTION ============ -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C150,110 350,10 500,60 C650,110 850,10 1000,60 C1150,110 1200,90 1200,90 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+    <div class="footer-content">
+      <h3 class="footer-logo">kumari<span>.</span></h3>
+      <div class="footer-quote-wrap">
+        <span class="quote-icon">“</span>
+        <blockquote class="footer-quote" id="footerQuote">
+          Intelligent systems, thoughtful design.
+        </blockquote>
+        <span class="quote-icon">”</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Kumari. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lenis Smooth Scroll CDN -->
+  <script src="https://unpkg.com/@darkroom.engineering/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js" defer></script>
+
+</body>
+
+</html>
