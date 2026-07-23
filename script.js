@@ -204,6 +204,14 @@ document.querySelectorAll('.prompt-chip').forEach(chip => {
 /* ============ PROJECTS TAB SWITCHING LOGIC ============ */
 const projectsData = [
   {
+    name: "Sky Garden Restaurant",
+    subtitle: "Rooftop Dining & Web Experience",
+    description: "A modern, responsive web application for Sky Garden Family Restaurant in Tadepalligudem. Features interactive menu browsing, rooftop dining showcase, table reservation, and full mobile optimization.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Netlify"],
+    live: "https://skygardenrestaurant.netlify.app",
+    code: "https://github.com/kumari01/restaurant1-ttd"
+  },
+  {
     name: "RAG Chatbot Engine",
     subtitle: "GenAI & Knowledge Retriever",
     description: "A custom Retrieval-Augmented Generation chatbot that parses enterprise documentation and handles contextual, domain-specific queries in real-time. Built with Python and vector embeddings.",
