@@ -83,12 +83,12 @@ if (finePointer && !reduceMotion) {
 /* ============ RAG BOT LOGIC ============ */
 const knowledgeBase = [
   {
-    keywords: ["skill", "technolog", "react", "fastapi", "python", "stack", "frontend", "backend", "code", "programming", "api", "rag"],
-    answer: "I build intelligent digital products from end to end—from training **machine learning models** and developing scalable **backend APIs** to crafting modern, intuitive **user interfaces**. I also build AI-powered applications using **Retrieval-Augmented Generation (RAG)**."
+    keywords: ["skill", "technolog", "react", "fastapi", "python", "stack", "frontend", "backend", "code", "programming", "api", "rag", "n8n", "telegram"],
+    answer: "I build intelligent digital products from end to end—from training **machine learning models** and building **n8n workflow automation agents** to developing scalable **backend APIs** and crafting modern **user interfaces**."
   },
   {
-    keywords: ["ai", "machine learning", "ml", "intelligence", "model", "neural", "train"],
-    answer: "My work brings together artificial intelligence, backend engineering, and frontend development. Whether building **AI-powered applications using RAG**, designing REST APIs, or developing responsive web experiences, I focus on solving real problems with clean, scalable engineering."
+    keywords: ["ai", "machine learning", "ml", "intelligence", "model", "neural", "train", "n8n", "telegram", "appointment", "booking", "agent"],
+    answer: "I built an **AI Telegram Appointment Booking Agent** using n8n, Telegram, and LLM APIs. It features intent classification, conversational memory, structured JSON outputs, and conditional routing, automatically creating appointments on Google Calendar and sending Telegram confirmations!"
   },
   {
     keywords: ["philosoph", "approach", "idea", "product", "who are you", "who i am", "profile", "bio", "about"],
@@ -96,7 +96,7 @@ const knowledgeBase = [
   },
   {
     keywords: ["contact", "hire", "email", "job", "work"],
-    answer: "I'm always open to talking about exciting full-stack, AI/ML, or design opportunities! You can use the contact form below or email me directly at hello@prebuiltui.com."
+    answer: "I'm always open to talking about exciting full-stack, AI/ML, or design opportunities! You can use the contact form below or email me directly at kumarigadi01@gmail.com."
   }
 ];
 
@@ -208,40 +208,40 @@ const projectsData = [
     subtitle: "Rooftop Dining & Web Experience",
     description: "A modern, responsive web application for Sky Garden Family Restaurant in Tadepalligudem. Features interactive menu browsing, rooftop dining showcase, table reservation, and full mobile optimization.",
     tags: ["HTML5", "CSS3", "JavaScript", "Netlify"],
-    live: "https://skygardenrestaurant.netlify.app",
+    live: "https://skygarden-res.vercel.app/",
     code: "https://github.com/kumari01/restaurant1-ttd"
   },
   {
-    name: "RAG Chatbot Engine",
-    subtitle: "GenAI & Knowledge Retriever",
-    description: "A custom Retrieval-Augmented Generation chatbot that parses enterprise documentation and handles contextual, domain-specific queries in real-time. Built with Python and vector embeddings.",
-    tags: ["GenAI", "ML", "Python", "Vector DB"],
-    live: "#",
-    code: "#"
+    name: "AI Telegram Appointment Booking Agent",
+    subtitle: "n8n, LLM APIs & Automation Workflow",
+    description: "Built a conversational AI appointment-booking workflow using n8n, Telegram, and an LLM to collect and validate required user information. Implemented intent classification, conversational memory, structured JSON outputs, and conditional routing to handle incomplete and complete appointment requests. Integrated Google Calendar and Telegram APIs to automatically create appointments and send booking confirmations to users.",
+    tags: ["n8n", "Telegram API", "LLM APIs", "Google Calendar", "JSON"],
+    live: "https://github.com/kumari01",
+    code: "https://github.com/kumari01"
   },
   {
-    name: "FastAPI API Gateway",
-    subtitle: "High-Performance Backend System",
-    description: "A scalable, asynchronous REST API gateway designed using FastAPI to route requests and manage rate-limiting for microservices. Features OAuth2 auth and high-concurrency Redis caching.",
-    tags: ["FastAPI", "Python", "Redis", "OAuth2"],
-    live: "#",
-    code: "#"
+    name: "Heart Disease Prediction",
+    subtitle: "Machine Learning Diagnostic System",
+    description: "A machine learning model developed to predict heart disease risks based on patient clinical indicators. Incorporates data preprocessing, exploratory data analysis, classification algorithms, and model evaluation metrics.",
+    tags: ["Python", "Machine Learning", "Scikit-Learn", "Pandas", "Healthcare AI"],
+    live: "Coming Soon",
+    code: "https://github.com/kumari01/HeartDisease-prediction"
   },
   {
-    name: "React Analytics Hub",
-    subtitle: "Data Visualization Interface",
-    description: "An intuitive web interface for tracking model training metrics and system performance. Built with React and charts libraries, utilizing server-sent events for live data streaming.",
-    tags: ["React", "CSS", "UI/UX", "Charts"],
-    live: "#",
-    code: "#"
+    name: "UPI Fraud Detection ML",
+    subtitle: "Real-Time Transaction Security Model",
+    description: "A machine learning pipeline designed to identify fraudulent transactions across UPI digital payment systems. Uses feature engineering, anomaly detection, and classification models to flag suspicious financial activities.",
+    tags: ["Python", "Machine Learning", "Fraud Detection", "Scikit-Learn", "FinTech"],
+    live: "Coming Soon",
+    code: "https://github.com/kumari01/upifraudml"
   },
   {
-    name: "PyTorch DL Pipeline",
-    subtitle: "Computer Vision Model Training",
-    description: "A PyTorch-based image classification pipeline trained on custom datasets. Features automated hyperparameters tuning and deployment packaging using Docker containers.",
-    tags: ["ML", "PyTorch", "Docker", "Python"],
-    live: "#",
-    code: "#"
+    name: "Movie Recommendation System",
+    subtitle: "Content-Based Filtering Engine",
+    description: "An interactive recommendation system that suggests movies based on content similarity and metadata matching. Leverages natural language processing (NLP) and vector similarity to provide personalized suggestions.",
+    tags: ["Python", "NLP", "Machine Learning", "Pandas", "Scikit-Learn"],
+    live: "Coming Soon",
+    code: "https://github.com/kumari01/MovieRecommendation"
   }
 ];
 
@@ -266,7 +266,19 @@ function switchProject(idx) {
     pNameEl.textContent = data.name;
     pSubtitleEl.textContent = data.subtitle;
     pDescriptionEl.textContent = data.description;
-    pLiveLinkEl.href = data.live;
+    
+    // Live link handling ("Coming Soon" or URL)
+    const liveLabel = pLiveLinkEl.querySelector('.btn-label');
+    if (!data.live || data.live === "Coming Soon" || data.live === "#") {
+      pLiveLinkEl.href = "javascript:void(0)";
+      pLiveLinkEl.classList.add('coming-soon');
+      if (liveLabel) liveLabel.textContent = "Coming Soon";
+    } else {
+      pLiveLinkEl.href = data.live;
+      pLiveLinkEl.classList.remove('coming-soon');
+      if (liveLabel) liveLabel.textContent = "Live";
+    }
+
     pCodeLinkEl.href = data.code;
 
     // Rebuild tags

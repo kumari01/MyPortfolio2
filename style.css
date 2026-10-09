@@ -84,6 +84,12 @@ body.custom-cursor-active textarea {
 }
 
 .navbar {
+  /* position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80%, calc(100% - clamp(20px, 5vw, 56px)));
+  z-index: 999; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,6 +101,7 @@ body.custom-cursor-active textarea {
   border-radius: 999px;
   padding: 10px 10px 10px 22px;
   box-shadow: 0 20px 40px -28px rgba(36, 21, 18, 0.35);
+
 }
 
 .nav-logo {
@@ -149,6 +156,9 @@ body.custom-cursor-active textarea {
   background: transparent;
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
+  color: var(--crimson-deep);
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -221,7 +231,7 @@ body.custom-cursor-active textarea {
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
   gap: clamp(28px, 5vw, 60px);
-  padding: clamp(20px, 4vh, 48px) 0 clamp(40px, 7vh, 72px);
+  padding: clamp(12px, 2vh, 28px) 0 clamp(40px, 7vh, 72px);
   min-height: 78vh;
 }
 
@@ -827,7 +837,7 @@ body.custom-cursor-active textarea {
   color: var(--ink);
   margin: 0 0 clamp(30px, 6vh, 60px) 0;
   letter-spacing: -0.01em;
-  
+
 }
 #skill-title{
   text-align: center;
@@ -1033,6 +1043,19 @@ body.custom-cursor-active textarea {
   color: var(--paper);
   border-color: var(--crimson);
   box-shadow: 0 10px 20px -8px rgba(183, 0, 26, 0.2);
+}
+
+.project-link-btn.coming-soon {
+  opacity: 0.7;
+  cursor: default;
+  border-style: dashed;
+}
+
+.project-link-btn.coming-soon:hover {
+  background: var(--paper);
+  color: var(--crimson-deep);
+  border-color: rgba(183, 0, 26, 0.25);
+  box-shadow: none;
 }
 
 .project-link-btn svg {
@@ -1241,10 +1264,10 @@ body.custom-cursor-active textarea {
   font-weight: 550;
   font-family: 'Inter', sans-serif;
   white-space: nowrap;
-  box-shadow: 
+  box-shadow:
     0 8px 30px rgba(36, 21, 18, 0.04),
     inset 0 1px 1px rgba(255, 255, 255, 0.85);
-  transition: 
+  transition:
     border-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
     background-color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
     box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
@@ -1257,7 +1280,7 @@ body.custom-cursor-active textarea {
   background: var(--peach); /* theme accent */
   border-color: var(--crimson);
   color: var(--crimson-deep);
-  box-shadow: 
+  box-shadow:
     0 10px 28px rgba(183, 0, 26, 0.14),
     0 0 10px rgba(183, 0, 26, 0.06);
 }
@@ -1356,7 +1379,7 @@ body.custom-cursor-active textarea {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 10px 30px -15px rgba(36, 21, 18, 0.03);
-  transition: 
+  transition:
     flex 0.65s cubic-bezier(0.2, 1, 0.22, 1),
     background-color 0.3s ease,
     border-color 0.3s ease,
@@ -1376,7 +1399,7 @@ body.custom-cursor-active textarea {
   flex: 6;
   background: #FFF;
   border-color: var(--crimson);
-  box-shadow: 
+  box-shadow:
     0 25px 60px -20px rgba(183, 0, 26, 0.08),
     0 1px 2px rgba(183, 0, 26, 0.03);
   cursor: default;
@@ -2055,7 +2078,7 @@ html.lenis body {
   .hero-left {
     animation: fadeInUpHero 0.95s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
-  
+
   .photo-col {
     animation: fadeInHeroPhoto 1.15s cubic-bezier(0.22, 1, 0.36, 1) both;
     animation-delay: 0.15s;
